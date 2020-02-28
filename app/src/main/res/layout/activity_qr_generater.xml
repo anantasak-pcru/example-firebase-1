@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.QrGeneraterActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/e_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <SeekBar
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:min="0"
+            android:max="1000"
+            android:id="@+id/s_width"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/e_width"
+            android:enabled="true"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <SeekBar
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:min="0"
+            android:max="1000"
+            android:id="@+id/s_height"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/e_height"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="Generate"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/b_generate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:text="Save"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/b_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/billing"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:fontFamily="@font/chulajarueak"
+                android:id="@+id/txt1"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/black"
+                android:text="ใบเสร็จรับเงินค่าน้ำประปา หมู่บ้านโคกกรวด"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/txt1"
+                android:id="@+id/line"
+                android:background="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <LinearLayout
+                android:id="@+id/billing_content"
+                android:layout_below="@id/line"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="ชื่อ นายแดง  สุขสบาย"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="ที่อยู่ 66/1 หมู่ 13 ต.กันจุ อ.บึงสามพัน
+จ.เพชรบูรณ์"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="รหัสเครื่องวัด a0000"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:fontFamily="@font/chulajarueak"
+                    android:text="ประจำเดือน 1/2563 วันที่อ่านหน่วย 01/01/2563"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/billing_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/vQrCode"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
